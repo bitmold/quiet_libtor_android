@@ -1,4 +1,4 @@
-These instructions are for building tor-android on a Debian based system.
+These instructions are for building libtor.so on a Debian based system.
 
 First install the prerequisite packages:
 
@@ -9,9 +9,7 @@ sudo apt install autogen autoconf libtool gettext-base autopoint
 sudo apt install git make g++ pkg-config openjdk-17-jdk openjdk-17-jre
 ```
 
-Then obtain the Android SDK and NDK. The Android SDK is installed by default with Android Studio, and the NDK can be downloaded from within Android Studio's SDK manager.
-
-for now, tor-android is built with NDK toolchain 25.2.9519654
+Then obtain the Android SDK and NDK. The Android SDK is installed by default with Android Studio, and the NDK 25.2.9519654 can be downloaded from within Android Studio's SDK manager.
 
 Then set these environment variables for the SDK and NDK:
 
@@ -29,9 +27,6 @@ To build, run:
 ```bash
 # make a universal tor-android library for every supported architecture
 ./tor-droid-make.sh build 
-# make a tor-android library for particular architectures from:
-# arm64-v8a armeabi-v7a x86 x86_64, e.g.:
-./tor-droid-make.sh build -a arm64-v8a
 ```
 
-This will produce an unsigned tor-android AAR
+This will produce `external/lib/arm64-v8a/libtor.so` which can be placed in `quiet/packages/mobile/android/app/src/main/jniLibs/arm64-v8a` to be bundled into the Quiet APK.
