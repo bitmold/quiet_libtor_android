@@ -1,4 +1,4 @@
-These instructions are for building libtor.so on a Debian based system.
+These instructions are for building `libtor.so` for Android with an arm64-v8a chipset on a Debian based system.
 
 First install the prerequisite packages:
 
@@ -20,12 +20,11 @@ export ANDROID_NDK_HOME=~/Android/Sdk/ndk/25.2.9519653
 
 Be sure that you have all of the git submodules up-to-date:
 ```bash
-./tor-droid-make.sh fetch
+./tor-droid-make.sh fetch -c
 ```
 
 To build, run:
 ```bash
-# make a universal tor-android library for every supported architecture
 ./tor-droid-make.sh build 
 ```
 
