@@ -9,7 +9,7 @@ sudo apt install autogen autoconf libtool gettext-base autopoint
 sudo apt install git make g++ pkg-config openjdk-17-jdk openjdk-17-jre
 ```
 
-Then obtain the Android SDK and NDK. The Android SDK is installed by default with Android Studio, and the NDK 25.2.9519654 can be downloaded from within Android Studio's SDK manager.
+Then obtain the Android SDK and NDK. The Android SDK is installed by default with Android Studio, and the NDK 28.2.13676358 can be downloaded from within Android Studio's SDK manager.
 
 Then set these environment variables for the SDK and NDK:
 
